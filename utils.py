@@ -1,6 +1,6 @@
 from faker import Faker
 from user.models import User
-from product.models import Product
+from product import Product
 from order.models import Order
 
 fake = Faker()
