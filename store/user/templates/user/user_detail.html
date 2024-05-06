@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Клиенты{% endblock %}
+
+{% block content %}
+    <h1>{{ user.name }}</h1>
+    <ul>
+        <li>Телефон: {{ user.phone_number }}</li>
+        <li>Эл. почта: {{ user.email }}</li>
+        <li>Адрес: <br>
+            <p>{{ user.address }}</p>
+        </li>
+        <li>Дата регистрации: {{ user.registration_date }}</li>
+    </ul>
+{% endblock %}

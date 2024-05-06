@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Форма для добавления товара{% endblock %}
+
+{% block content %}
+    <h1>Форма для добавления товара</h1>
+    <h3>{{ message }}</h3>
+    <form action="{% url 'add_product' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Добавить</button>
+    </form>
+{% endblock %}
